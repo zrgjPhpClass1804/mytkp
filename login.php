@@ -80,7 +80,7 @@ session_start();//创建或查找已存在的PHPSESSID
 			// }
 			// 吴昌勇测试提交
 
-			//fdsfdshfjdshfdsjfds
+			//]fdsfdshfjdshfdsjfds
 		</script>
 	</head>
 	<body>
