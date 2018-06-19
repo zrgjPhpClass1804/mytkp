@@ -27,7 +27,7 @@ session_start();//创建或查找已存在的PHPSESSID
 				height: 16px;
 			}
 			#vcode{
-	            width: 85%;
+	            width: 80%;
 			}
 			.vcode{
 	            display: block;
@@ -40,7 +40,7 @@ session_start();//创建或查找已存在的PHPSESSID
 		<script type="text/javascript">
 			$(function(){
 				$("#vcode-img").click(function(){
-					$(this).attr("src", "index.php?c=vcode&a=vcode&" + new Date().getTime());
+					$(this).attr("src", "index.php/Home/User/getVcode?" + new Date().getTime());
 				});
 
 // 				var txt = '{ "employees" : [' + '{ "firstName":"Bill" , "lastName":"Gates" },' + '{ "firstName":"George" , "lastName":"Bush" },' + '{ "firstName":"Thomas" , "lastName":"Carter" } ]}';
@@ -118,7 +118,7 @@ session_start();//创建或查找已存在的PHPSESSID
 				<label>验证码</label><br/>
 				<input type="text" class="form-control vcode" id="vcode" name="vcode" placeholder="验证码" />
 				<span class="glyphicon form-control-feedback"></span>
-				<img title="看不清楚？点击换一张" src="../index.php?c=vcode&a=vcode" class="vcode" id="vcode-img" />
+				<img title="看不清楚？点击换一张" src="index.php/Home/User/getVcode" class="vcode" id="vcode-img" />
 				<div class="clearfix"></div>
 				<font>
 					<?php
