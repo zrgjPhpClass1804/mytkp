@@ -1,0 +1,12 @@
+[ 2018-06-15T11:35:08+08:00 ] ::1 /tp2/index.php/http://localhost:8080/tp2/Public/bootstrap/admin.php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Http:
+
+[ 2018-06-15T11:36:52+08:00 ] ::1 /tp2/index.php/tp2/index.php/Home/User/jump.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Tp2
+

@@ -13,7 +13,7 @@ class PermissionController extends Controller {
      * 加载所有的角色列表
      */
     public function loadAllRoles(){
-        echo json_encode($this->model->select());
+        $this->ajaxReturn($this->model->select());
     }
     
     /**
@@ -22,7 +22,7 @@ class PermissionController extends Controller {
     public function loadUserRoles(){
         $rid = $_GET["rid"];
         $sql = "select u.userid,u.realname,(select 1 from tb_userrole ur where ur.userid=u.userid and ur.roleid=%d) as checked from tb_user u";
-        echo json_encode($this->model->query($sql, $rid));
+        $this->ajaxReturn($this->model->query($sql, $rid));
     }
 
     /**

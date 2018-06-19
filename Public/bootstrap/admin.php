@@ -95,7 +95,7 @@ if(!isset($_SESSION["user"])){
 
 				$("#btn-exit").click(function() {
 					if(confirm("你确定要退出系统吗？")){
-						location.href = "../../index.php/home/user/logout";
+						location.href = "../../index.php/Home/User/logout";
 					}
 				});
 

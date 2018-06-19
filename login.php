@@ -85,7 +85,7 @@ session_start();//创建或查找已存在的PHPSESSID
 	</head>
 	<body>
 		
-		<form id="ff" onsubmit="" action="index.php/home/user/login" method="post">
+		<form id="ff" onsubmit="" action="index.php/Home/User/login" method="post">
 			<div class="form-group has-feedback">
 				<label>帐号</label>
 				<input type="text" class="form-control" id="un" name="userName" placeholder="userName" />

@@ -12,10 +12,11 @@ class UserController extends Controller{
     /**
      * 用户登录
      */
-    public function login(){
-        $userName = $_POST["userName"];
-        $userPass = $_POST["userPass"];
-
+    public function login($userName=null, $userPass=null){
+        //$userName = $_POST["userName"];
+        //$userPass = $_POST["userPass"];
+        //$userName = I("userName");
+        //echo "$userName, $userPass";
         $data = $this->model->where("userName='%s'", $userName)->select();
         if(count($data) > 0){
             if($data[0]["userpass"] == $userPass){
@@ -26,7 +27,9 @@ class UserController extends Controller{
                 $sql = "select distinct m.* from tb_userrole ur, tb_rolemenu rm, tb_menu m where ur.userid=%d and ur.roleid=rm.roleid and rm.menuid=m.mid and m.isHomePage=1";
                 $menus = $this->model->query($sql, $data[0]["userid"]);
                 $_SESSION["menus"] = $menus;
-                header("location:".ROOT."Public/bootstrap/admin.php");
+                //header("location:".ROOT."Public/bootstrap/admin.php");
+                //$this->redirect("/Home/User/jump");
+                redirect("/tp2/index.php/Home/User/jump");
             }else{
                 $msg = 2;//密码错误
                 $_SESSION["msg"] = $msg;
@@ -37,6 +40,10 @@ class UserController extends Controller{
             $_SESSION["msg"] = $msg;
             header("location:".ROOT."login.php");
         }
+    }
+
+    public function jump(){
+        header("location:".ROOT."Public/bootstrap/admin.php");
     }
 
     /**
