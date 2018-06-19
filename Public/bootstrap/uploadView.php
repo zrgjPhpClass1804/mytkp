@@ -36,8 +36,6 @@
 					var files = this.files;
 					//开始循环上传
 					for(var i=0;i<files.length;i++){
-						//先添加一个图片div 先使用默认图片 待上传完成后更换为刚刚上传的图片
-						//让滚动条滚动到底部
 						var formdata = new FormData();
 						//添加文件数据字段
 						formdata.append("fileList", files[i]);
