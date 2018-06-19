@@ -141,7 +141,7 @@ if(!isset($_SESSION["user"])){
 		<div class="north">
 			<button type="button" id="btn-exit" class="btn btn-default pull-right" style="margin-top:10px;margin-right:10px;">退出</button>
 			<font class="pull-right">
-				<img title="设置头像" selectorID="setHeadPicture" id="headPicture" url="../course11_file/fileUploadView.php" src="../upload/default.png" class="img-circle secondLevel" style="margin-bottom: 4px;cursor: pointer;width:50px;height:50px;">
+				<img title="设置头像" selectorID="setHeadPicture" id="headPicture" url="fileUploadView.php" src="../upload/default.png" class="img-circle secondLevel" style="margin-bottom: 4px;cursor: pointer;width:50px;height:50px;">
 				<?php 
 				    if(isset($_SESSION["user"])){
 				        echo $_SESSION["user"]["realname"];
